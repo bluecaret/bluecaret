@@ -1,0 +1,16 @@
+{
+  "name": "bluecaret",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "John W Hancock (BlueCaret)",
+  "license": "ISC",
+  "homepage": "https://bluecaret.github.io/bluecaret",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
