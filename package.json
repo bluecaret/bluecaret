@@ -4,13 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:css": "node-sass --output-style compressed --source-map true scss -o public/css",
+    "watch:css": "npm run build:css && node-sass --watch --output-style compressed --source-map true scss -o public/css",
+    "serve": "live-server --open=public --watch=public",
+    "start": "run-p watch:css serve",
+    "build": "npm run build:css",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "John W Hancock (BlueCaret)",
-  "license": "ISC",
+  "license": "unlicensed",
   "homepage": "https://bluecaret.github.io/bluecaret",
   "dependencies": {
-    "gh-pages": "^2.1.1"
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
   }
 }
