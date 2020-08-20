@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import '../node_modules/normalize-scss/sass/normalize/import-now';
 
-$blue: #3FA9F5;
+$b1: #4DE6FF;
+$b2: #71A0FF;
+$b3: #00B3EA;
+$b4: #375BEF;
 
 html,
 body {
@@ -8,60 +12,88 @@ body {
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;  /* 10px = 1rem */
+}
+
 body {
-  font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;  /* px fallback */
+  font-size: 1.6rem;  /* default font-size for document */
+  line-height: 1.5;
+  background: white;
+  background-image: url(../assets/bluecaret-pattern.svg);
+  background-size: 10%;
+  background-position: right 0 top 0;
+  background-repeat: repeat-y;
 }
 
-header,
-article {
-  display: grid;
-  grid-template: 1fr / 50% 50%;
-  width: 100%;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
   min-height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-section {
-  display: block;
 }
 
 header {
-  background: black;
-  background: linear-gradient(45deg, 
-    white 70%, 
-    lighten($blue, 10%) 70%, 
-    lighten($blue, 15%) 85%, 
-    lighten($blue, 20%) 85%);
-  section {
-    display: grid;
-    place-items: center;
-    text-align: center;
+  width: 80rem;
+  max-width: 90%;
+  margin-top: 4rem;
+  h1 {
+    margin: 0;
+    padding: 0;
   }
   img {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 }
 
-.tagcloud {
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: .3em .05em;
-    font-size: 3rem;
+section {
+  width: 80rem;
+  max-width: 90%;
+  display: block;
+  margin: 4rem 0;
+  h2 {
+    color: $b2;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
   }
-  li {
-    margin: 0;
-    padding: 0;
+  nav {
+    display: flex;
+    flex-wrap: wrap;
   }
-  section {
-    display: grid;
-    align-items: center;
-  }
-  section:first-child {
-    background: black;
-    color: white;
-    text-align: right;
+  a {
+    background: $b1;
+    padding: 1rem 3rem;
+    margin: 0rem 1.5rem .5rem 0;
+    border-radius: 1rem;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      background: $b2;
+    }
   }
 }
+
+footer {
+  width: 80rem;
+  max-width: 90%;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  a {
+    color: $b4;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: darken($b4, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
