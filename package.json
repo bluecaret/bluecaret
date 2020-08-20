@@ -9,7 +9,7 @@
     "serve": "live-server --open=public --watch=public",
     "start": "run-p watch:css serve",
     "build": "npm run build:css",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "John W Hancock (BlueCaret)",
