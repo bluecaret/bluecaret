@@ -3,75 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>BlueCaret^</title>
-    <link rel="stylesheet" href="/css/styles.css?v=101920220744" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon.png?v=XBbJ30mbK3"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon-32x32.png?v=XBbJ30mbK3"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon-16x16.png?v=XBbJ30mbK3"
-    />
+    <link rel="stylesheet" href="/styles.css?v=202307180833" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=XBbJ30mbK3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=XBbJ30mbK3" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=XBbJ30mbK3" />
     <link rel="manifest" href="/site.webmanifest?v=XBbJ30mbK3" />
-    <link
-      rel="mask-icon"
-      href="/safari-pinned-tab.svg?v=XBbJ30mbK3"
-      color="#5bbad5"
-    />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=XBbJ30mbK3" color="#5bbad5" />
     <link rel="shortcut icon" href="/favicon.ico?v=XBbJ30mbK3" />
     <meta name="apple-mobile-web-app-title" content="BlueCaret^" />
     <meta name="application-name" content="BlueCaret^" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <main class="home">
-      <header>
-        <h1>
-          <a href="/"
-            ><img src="/assets/bluecaret-logo.svg" alt="BlueCaret logo"
-          /></a>
-        </h1>
-      </header>
+    <div id="app" class="app">
+      <app-header></app-header>
 
-      <section>
-        <h2>Check out my projects...</h2>
-        <nav>
-          <a class="btn" href="https://www.carettab.com/">CaretTab</a>
-          <a class="btn" href="/two-steps-forward/">Two Steps Forward</a>
-          <a
-            class="btn"
-            href="https://chrome.google.com/webstore/detail/rms-run-my-script-script/bifnofbpdbdmgopjoidbicngijjmlogj"
-            >RMS: Run My Script</a
-          >
-        </nav>
-      </section>
+      <div class="container"></div>
 
-      <footer>
-        <p class="footerNav">
-          <a href="/">home</a> | <a href="/about">about</a> |
-          <a href="/contact">contact</a> | <a href="/privacy">privacy</a> |
-          <a href="/terms">terms</a>
-        </p>
-        <p>
-          Find <a href="https://www.johnwhancock.com/">me</a> on
-          <a href="https://twitter.com/BlueCaret">Twitter</a>,
-          <a href="https://github.com/bluecaret">GitHub</a>,
-          <a href="https://www.linkedin.com/in/johnwhancock/">LinkedIn</a>, or
-          send me an <a href="mailto:dev@bluecaret.com">email</a>.
-        </p>
-      </footer>
-    </main>
+      <div class="container features products">
+        <div class="container">
+          <div>
+            <h2>Project highlights</h2>
+            <p>
+              Explore a selection of my work, consisting of web applications and browser extensions that I've developed
+              to provide practical solutions and improve user experience across the web.
+            </p>
+          </div>
+        </div>
+        <div class="feature product">
+          <img src="/assets/carettab-logo-2023-transparent.svg" alt="" />
+          <div class="featureContent">
+            <h2 class="h3">CaretTab - New Tab Dashboard</h2>
+            <p>
+              It's not just a browser extension; it's a statement - your tab, your rules! Explore the realm of infinite
+              customization right at your fingertips and transform the way you experience browsing. Get it today for
+              free!
+            </p>
+            <p>
+              <a class="btn" href="https://www.carettab.com/">Learn more about CaretTab</a>
+            </p>
+          </div>
+        </div>
+        <div class="feature product productAlt">
+          <img src="/assets/two-steps-forward-alt.svg" alt="Logo for Two Steps Forward" />
+          <div class="featureContent">
+            <h2 class="h3">Two Steps Forward</h2>
+            <p>
+              A browser extension that adds a To Do list for your new tab page. Step forward and make progress on your
+              day by managing your tasks on every new tab.
+            </p>
+            <p>
+              <a class="btn" href="/two-steps-forward">Learn more about Two Steps Forward</a>
+            </p>
+          </div>
+        </div>
+        <div class="feature product product">
+          <img src="/assets/rms-symbol.svg" alt="Logo for Two Steps Forward" />
+          <div class="featureContent">
+            <h2 class="h3">Run My Script</h2>
+            <p>
+              A browser extension that lets you easily run JavaScript code on the current browser tab. RMS (Run My
+              Script) is a JavaScript runner. Add your code, and click run to run JavaScript in your current tab!
+            </p>
+            <p>
+              <a
+                class="btn"
+                href="https://chrome.google.com/webstore/detail/rms-run-my-script-script/bifnofbpdbdmgopjoidbicngijjmlogj?hl=en"
+                rel="noreferrer"
+                >Learn more about RMS</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+            <h2>Let's Connect</h2>
+            <p>
+              Interested in learning more about my work? Don't hesitate to get in touch. I'm always open to new ideas
+              and conversations.
+            </p>
+            <p>
+              <a class="btn" href="/contact">Contact me</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+
+    <script type="module" src="/js/header.js"></script>
+    <script type="module" src="/js/footer.js"></script>
   </body>
 </html>

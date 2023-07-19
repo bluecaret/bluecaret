@@ -3,73 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>BlueCaret^ - Contact Me</title>
-    <link rel="stylesheet" href="/css/styles.css?v=101920220744" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon.png?v=XBbJ30mbK3"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon-32x32.png?v=XBbJ30mbK3"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon-16x16.png?v=XBbJ30mbK3"
-    />
+    <title>Contact - BlueCaret^</title>
+    <link rel="stylesheet" href="/styles.css?v=202307180833" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=XBbJ30mbK3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=XBbJ30mbK3" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=XBbJ30mbK3" />
     <link rel="manifest" href="/site.webmanifest?v=XBbJ30mbK3" />
-    <link
-      rel="mask-icon"
-      href="/safari-pinned-tab.svg?v=XBbJ30mbK3"
-      color="#5bbad5"
-    />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=XBbJ30mbK3" color="#5bbad5" />
     <link rel="shortcut icon" href="/favicon.ico?v=XBbJ30mbK3" />
     <meta name="apple-mobile-web-app-title" content="BlueCaret^" />
     <meta name="application-name" content="BlueCaret^" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
+    <style>
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+        border: none;
+        background: hsl(0deg 0% 100% / 0.6);
+        font-size: 1rem;
+      }
+      .form-group input {
+        font-family: 'Source Sans 3', sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>
-          <a href="/"
-            ><img src="/assets/bluecaret-logo.svg" alt="BlueCaret logo"
-          /></a>
-        </h1>
-      </header>
+    <div id="app" class="app">
+      <app-header></app-header>
 
       <section>
-        <h2>Contact Me</h2>
-        <p><a href="mailto:dev@bluecaret.com">dev@bluecaret.com</a>.</p>
-        <!-- <p>
-        John W Hancock<br>
-        PO Box 655<br>
-        Sumner, WA 98390<br>
-        United States of America
-      </p> -->
+        <h2>Contact BlueCaret</h2>
+        <p>Fill out the form below or simply send an email to dev@bluecaret.com</p>
+        <form action="https://formsubmit.co/dev@bluecaret.com" method="POST">
+          <input type="hidden" name="_next" value="https://bluecaret.com/contact/thanks/" />
+          <input type="hidden" name="_subject" value="Response to Your Inquiry on BlueCaret" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Hello, Thank you for reaching out via BlueCaret's contact form! I have successfully received your message and appreciate the time you've taken to get in touch. I'll review your inquiry and respond as soon as possible. If you have any additional information to add or if your request is urgent, don't hesitate to send another email to dev@bluecaret.com (do not reply to this message). Cheers! -BlueCaret, Developer of CaretTab"
+          />
+          <div class="form-group">
+            <label for="email">Your email address:</label>
+            <input type="email" name="email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Your message:</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
+          </div>
+          <div class="form-group">
+            <button id="submit" class="btn">Send message</button>
+          </div>
+        </form>
       </section>
 
-      <footer>
-        <p class="footerNav">
-          <a href="/">home</a> | <a href="/about">about</a> |
-          <a href="/contact">contact</a> | <a href="/privacy">privacy</a> |
-          <a href="/terms">terms</a>
-        </p>
-        <p>
-          Find <a href="https://www.johnwhancock.com/">me</a> on
-          <a href="https://twitter.com/BlueCaret">Twitter</a>,
-          <a href="https://github.com/bluecaret">GitHub</a>,
-          <a href="https://www.linkedin.com/in/johnwhancock/">LinkedIn</a>, or
-          send me an <a href="mailto:dev@bluecaret.com">email</a>.
-        </p>
-      </footer>
-    </main>
+      <app-footer></app-footer>
+    </div>
+
+    <script type="module" src="/js/header.js"></script>
+    <script type="module" src="/js/footer.js"></script>
   </body>
 </html>
