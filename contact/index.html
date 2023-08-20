@@ -108,6 +108,7 @@
 
         const submitButton = document.getElementById('submit')
         const messageBox = document.getElementById('messageBox')
+        const form = document.getElementById('contactForm')
 
         submitButton.disabled = true
         messageBox.textContent = ''
@@ -134,6 +135,7 @@
                 messageBox.textContent =
                   "Thank you for reaching out! I've received your message and will respond promptly. Your patience is much appreciated. Should you have any further details or questions, please feel free to email again at dev@bluecaret.com."
                 messageBox.classList.add('success')
+                form.reset()
               } else {
                 messageBox.textContent = 'Failed to send message. Please try again later.'
                 throw new Error('Failed to send message')
