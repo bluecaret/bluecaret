@@ -76,7 +76,7 @@ class AppFooter extends HTMLElement {
           </div>
           <div class="footerLinks">
             <a href="https://carettab.com">CaretTab</a>
-            <a href="/two-steps-forward">Two Steps Forward</a>
+            <!--<a href="/two-steps-forward">Two Steps Forward</a>-->
             <a href="/patterns">Patterns</a>
             <a href="https://github.com/bluecaret/" rel="noreferrer">Github</a>
             <a href="https://www.linkedin.com/in/johnwhancock/" rel="noreferrer">LinkedIn</a>
