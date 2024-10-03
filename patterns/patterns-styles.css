@@ -1,0 +1,385 @@
+.globalOptionsSection {
+  position: sticky;
+  top: 1rem;
+  margin-block-end: 0;
+  background-color: var(--b4);
+  width: min(60rem, calc(100% - 3rem));
+  border-radius: 3rem;
+  padding-inline: 1rem;
+  @media screen and (max-width: 560px) {
+    top: 0;
+    margin-inline: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+.globalOptions {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  @media screen and (max-width: 800px) {
+    gap: .5rem;
+    grid-template-columns: 2fr 2fr 3fr;
+  }
+}
+
+.colorField {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  &:focus-within {
+    box-shadow: 0 0 0 0.2rem var(--b1);
+  }
+  & > label {
+    position: absolute;
+    top: 0;
+    left: 1.25rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    & > span:first-child {
+      @media screen and (max-width: 800px) {
+        display: none
+      }
+    }
+    & > span:last-child {
+      display: none;
+      @media screen and (max-width: 800px) {
+        display: inline
+      }
+    }
+  }
+  & > input {
+    padding: 0;
+    border: 0;
+    background-color: var(--b3);
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    height: 2.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-color-swatch-wrapper {
+      border-radius: .5rem;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+    }
+    &::-webkit-color-swatch {
+      border: 0;
+    }
+  }
+}
+
+.textField {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1.75rem;
+  border: 0;
+  background-color: var(--b3);
+  color: var(--text);
+  font-size: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 .25rem 0 1rem;
+  &:focus-within {
+    box-shadow: 0 0 0 0.2rem var(--b1);
+  }
+  & > label {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    font-weight: 400;
+    color: currentColor;
+  }
+  & > input {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    border: 0;
+    background-color: transparent;
+    color: currentColor;
+    font-size: inherit;
+    font-weight: 800;
+    height: calc(100% - .5rem);
+    border: 1px solid var(--b4);
+    border-radius: 1.75rem;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.patternSection {
+  width: min(60rem, calc(100% - 3rem));
+  margin-block-start: 4rem;
+}
+
+.patternList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.patternCard {
+  display: block;
+}
+
+.patternContent {
+  border: 1rem solid var(--b3);
+  width: 100%;
+  height: 10rem;
+  border-radius: 3rem;
+  background-color: white;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+.patternMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  padding: .4rem 2rem 0;
+}
+
+.patternName {
+  margin-inline-end: auto;
+}
+
+.viewBtn,
+.codeBtn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--text);
+  font-size: .8rem;
+  font-weight: 200;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .3em;
+  & svg {
+    width: 1.6em;
+    height: 1.6em;
+  }
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border: 0;
+  box-shadow: 0 0 3rem 0 var(--b3);
+  background-color: var(--b3);
+  border: 1px solid var(--b4);
+  border-radius: .4rem;
+  animation: fade-out 0.3s ease-out;
+  & .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    & button {
+      padding: .3rem;
+      border-radius: 3rem;
+      background-color: rgba(0, 0, 0, 0.9);
+      border: 0;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 200;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & svg {
+        width: 1.6em;
+        height: 1.6em;
+      }
+    }
+  }
+}
+
+dialog[open] {
+  animation: fade-in 0.3s ease-out;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  animation: backdrop-fade-out 0.5s ease-out forwards;
+}
+
+dialog[open]::backdrop {
+  animation: backdrop-fade-in 0.5s ease-out forwards;
+}
+
+.dialogContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+dialog.dialogPreview {
+  width: calc(100dvw - 10rem);
+  height: calc(100dvh - 10rem);
+  border: 0;
+  @media screen and (max-width: 560px) {
+    width: calc(100dvw - 2rem);
+    height: calc(100dvh - 2rem);
+  }
+}
+
+dialog.dialogCode {
+  width: min(60rem, calc(100% - 2rem));
+  height: min(30rem, calc(100% - 2rem));
+  padding: 1rem;
+  & .dialogContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+  }
+  & .dialogCodeTitle {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.3;
+    color: var(--text);
+    border-radius: 2rem 2rem 0 0;
+    flex: 0 0 auto;
+  }
+  & .dialogCodeContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    flex: 1 1 100%;
+    @media screen and (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  & .close button {
+    background-color: var(--b4);
+  }
+  & .dialogCodePreview {
+    background-repeat: repeat;
+    border-radius: .4rem;
+  }
+  & .dialogCodeGet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  & .copyBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
+    border-color: transparent;
+    background-color: var(--b4);
+    color: var(--text);
+    border-radius: .4rem;
+    transition: all .2s ease-out;
+    &:hover {
+      border-color: var(--b1);
+    }
+    & svg {
+      width: 1.6em;
+      height: 1.6em;
+    }
+  }
+  & .dialogCodeTextarea {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+    border: 0;
+    border-radius: .4rem;
+    background-color: var(--b2);
+    color: black;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: pre-wrap;
+    word-break: break-word;
+    & code {
+      display: block;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes backdrop-fade-in {
+  0% {
+    background-color: rgb(0 0 0 / 0);
+  }
+
+  100% {
+    background-color: rgb(0 0 0 / 0.5);
+  }
+}
+
+@keyframes backdrop-fade-out {
+  0% {
+    background-color: rgb(0 0 0 / 0.5);
+  }
+
+  100% {
+    background-color: rgb(0 0 0 / 0);
+  }
+}
