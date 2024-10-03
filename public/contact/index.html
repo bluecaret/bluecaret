@@ -130,14 +130,14 @@
                 messageBox.classList.add('success')
                 form.reset()
               } else {
-                messageBox.textContent = 'Failed to send message. Please try again later.'
+                messageBox.textContent = 'Sorry, failed to send message. Send me an email to dev@bluecaret.com'
                 throw new Error('Failed to send message')
                 messageBox.classList.add('error')
               }
             })
             .catch((error) => {
               console.error('There was an error:', error)
-              messageBox.textContent = 'Failed to send message. Please try again later.'
+              messageBox.textContent = 'Sorry, failed to send message. Send me an email to dev@bluecaret.com'
               messageBox.classList.add('error')
             })
             .finally(() => {
