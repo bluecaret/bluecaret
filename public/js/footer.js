@@ -1,7 +1,8 @@
 class AppFooter extends HTMLElement {
   connectedCallback() {
     const currentYear = new Date().getFullYear()
-    this.innerHTML = /*html*/ `
+    const shadowRoot = this.attachShadow({ mode: 'open' })
+    shadowRoot.innerHTML = /*html*/ `
       <style>
       .footer {
         padding: 6rem 0 2rem;
@@ -67,6 +68,7 @@ class AppFooter extends HTMLElement {
       </style>
       <footer class="footer">
         <div class="footerContainer">
+          <slot name="pre"></slot>
           <div class="footerLinks">
             <a href="/">Home</a>
             <a href="/about">About</a>
@@ -75,7 +77,7 @@ class AppFooter extends HTMLElement {
             <a href="/terms">Terms of Use</a>
           </div>
           <div class="footerLinks">
-            <a href="https://carettab.com">CaretTab</a>
+            <a href="/carettab">CaretTab</a>
             <!--<a href="/two-steps-forward">Two Steps Forward</a>-->
             <a href="/patterns">Patterns</a>
             <a href="https://github.com/bluecaret/" rel="noreferrer">Github</a>
