@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaretTab - New Tab Dashboard | Browser extension for Chrome and Edge</title>
+    <meta
+      name="description"
+      content="A browser extension that replaces your New Tab page with a unique and fully customizable dashboard."
+    />
+    <meta property="og:title" content="CaretTab - New Tab Dashboard | Browser extension for Chrome and Edge" />
+    <meta
+      property="og:description"
+      content="A browser extension that replaces your New Tab page with a unique and fully customizable dashboard."
+    />
+    <meta name="apple-mobile-web-app-title" content="CaretTab - New Tab Dashboard" />
+    <meta name="application-name" content="CaretTab - New Tab Dashboard" />
+    <meta property="og:image" content="/carettab/img/screenshot1.jpg?v=202410040823" />
+    <meta property="og:url" content="https://www.carettab.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/carettab/img/apple-touch-icon.png?v=202410040823" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/carettab/img/favicon-32x32.png?v=202410040823" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/carettab/img/favicon-16x16.png?v=202410040823" />
+    <link rel="shortcut icon" href="/carettab/favicon.ico?v=202410040823" />
+    <link rel="manifest" href="/carettab/carettab.webmanifest?v=202410040823" />
+    <link rel="stylesheet" href="/styles.css?v=202307180833" />
+    <link rel="stylesheet" href="/carettab/style.css?v=202410040823" />
+    <style>
+      summary {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="header">
+        <div class="container">
+          <h1 class="logo">
+            <a href="/carettab">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" viewBox="0 0 500 369">
+                <path
+                  d="M20 332 201 18h99l181 314-10 19H334l-83-145-84 145H31l-11-19Zm32-7h101l87-150h21l87 150h101L286 43h-70L52 325Z"
+                />
+                <circle cx="208.3" cy="30.1" r="30.1" />
+                <circle cx="292.7" cy="30.1" r="30.1" />
+                <circle cx="250.6" cy="184" r="30.1" />
+                <circle cx="470.5" cy="338" r="30.1" />
+                <circle cx="340.8" cy="338.4" r="30.1" />
+                <circle cx="160.2" cy="338.4" r="30.1" />
+                <circle cx="30.7" cy="338" r="30.1" />
+              </svg>
+              <span>CaretTab</span>
+            </a>
+          </h1>
+          <div class="explanation">
+            A browser extension that replaces your New Tab page with a unique and fully customizable dashboard.
+          </div>
+          <div class="slogan">Your Tab, Your Rules</div>
+          <div class="getItBar">
+            <a
+              href="https://chrome.google.com/webstore/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna"
+              ><img
+                src="/carettab/img/chrome-store.svg"
+                height="60"
+                alt="Chrome Web store icon with the text: 'Available in the Chrome Web Store'"
+            /></a>
+            <a
+              href="https://microsoftedge.microsoft.com/addons/detail/carettab-new-tab-clock-/bfpmncaohmjelebfobabccfjgmeolloe"
+              ><img
+                src="/carettab/img/edge-store.svg"
+                height="60"
+                alt="Edge Web store icon with the text: 'Get it for Microsoft Edge'"
+            /></a>
+          </div>
+        </div>
+      </header>
+
+      <div class="container subpage">
+        <h2>Help & Tips</h2>
+        <p>
+          Welcome to the CaretTab Help & Tips page! This is your go-to spot for answers to frequently asked questions
+          about CaretTab, helping you make the most of the extension. If you've got a question that isn't covered in the
+          FAQs or need further assistance, don't hesitate to reach out via the contact form. Let's get you started on
+          your personalized browsing journey with CaretTab!
+        </p>
+        <div class="featureContent largeHeadingMargin">
+          <h3 class="h4">Join the CaretTab Community</h3>
+          <p>
+            Visit our GitHub Discussions page to share your ideas, suggestions, and bug reports. It's the perfect place
+            to engage with other users, collaborate, and provide valuable feedback. We value your input and look forward
+            to hearing from you.
+          </p>
+          <p style="margin-top: 0.8rem">
+            <a
+              href="https://github.com/bluecaret/carettab/discussions"
+              target="_blank"
+              rel="noreferrer"
+              class="btn center"
+            >
+              Community Discussions Page
+            </a>
+          </p>
+        </div>
+        <h3 class="largeHeadingMargin">Frequently Asked Questions</h3>
+        <div class="faq">
+          <h4>General questions</h4>
+          <details>
+            <summary>Is CaretTab free to use?</summary>
+            <p>Yes! All features and functionality is completely free to use.</p>
+            <p>
+              If you'd like to help support the development of CaretTab, you can
+              <a href="https://www.buymeacoffee.com/bluecaret" target="_blank" rel="noreferrer">buy me a coffee</a>.
+            </p>
+          </details>
+
+          <details>
+            <summary>Are there advertisements in the extension?</summary>
+            <p>None at all!</p>
+          </details>
+
+          <details>
+            <summary>Does CaretTab track my data? / Can the developer see my data?</summary>
+            <p>
+              Nope. Nor do I want to! The extension does not require any accounts, does no tracking, has no
+              advertisements, and no unnecessary data collection. There isn't even any analytics involved (with the
+              exception of this site and the store listings).
+            </p>
+            <p>
+              Your data and settings are saved to your browser's internal storage. No data is saved on any CaretTab
+              servers. The only time your data or settings will be placed on a server would be if you are signed into
+              your browser and have enabled syncing, in which case it is only synced with your browser maker's servers.
+              CaretTab only offers it to be synced but does not have any access to that data outside your browser.
+            </p>
+            <p>
+              This isn't just talk either, CaretTab's source code is Open Source and freely available on
+              <a href="https://github.com/bluecaret/carettab" target="_blank" rel="noreferrer">GitHub</a>.
+            </p>
+          </details>
+
+          <details>
+            <summary>I have an idea for a feature!</summary>
+            <p>
+              That's fantastic! Feel free to share it via the contact form or by posting to the
+              <a href="https://github.com/bluecaret/carettab/discussions" target="_blank" rel="noreferrer"
+                >CaretTab Discussions page</a
+              >.
+            </p>
+          </details>
+
+          <details>
+            <summary>What/who is BlueCaret and CaretTab, I'm confused by the names!</summary>
+            <p>
+              Understandable confusion! "BlueCaret" is the screen name/alias for the owner and developer of this site
+              and the CaretTab extension, and is also the name of the business it is all listed under. "CaretTab" is the
+              name I gave this Chrome Extension that replaces the New Tab page. CaretTab is listed in the Web Stores
+              under the publisher name of BlueCaret. This is also why pages such as the Terms of Use and Privacy Policy
+              bring you to bluecaret.com.
+            </p>
+          </details>
+
+          <details>
+            <summary>What permissions does CaretTab use?</summary>
+            <p>
+              CaretTab attempts to use minimal permissions when possible. If anything is not needed at the start, you
+              will be prompted for the optional permission when enabling the feature that requires it. Below is a list
+              of the permissions CaretTab uses and why:
+            </p>
+            <ul>
+              <li><strong>Storage</strong>: Used to store your settings in the browser's storage area.</li>
+              <li>
+                <strong>Replace the page you see when opening a new tab</strong>: Used to replace the New Tab page with
+                this extension.
+              </li>
+              <li>
+                <strong>This extension can read and change your data on sites</strong>: The sites listed with this
+                permission are used to retrieve data for CaretTab to function.
+                <ul>
+                  <li>
+                    <strong>https://fonts.googleapis.com/*</strong>: The fonts available in the extension are from
+                    Google Fonts; this URL is where the fonts are loaded from.
+                  </li>
+                  <li>
+                    <strong>https://dtfv5mvrx9.execute-api.us-west-2.amazonaws.com/*</strong>: This is an Amazon Web
+                    Services server that CaretTab accesses to retrieve various data such us API access for weather among
+                    other data. Data is only ever retrieved from this address, never sent.
+                  </li>
+                  <li>
+                    (Optional) <strong>https://developer.sepush.co.za/*</strong>: Used to retrieve data for the
+                    Loadshedding widget.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                (Optional) <strong>Read the icons of the websites you visit</strong>: Used to display the favicons
+                (logos) of the website you add to your quick links.
+              </li>
+              <li>
+                (Optional) <strong>Read a list of your most frequently visited websites</strong>: Used to display the
+                "most visited" menu on the quick links widget, when enabled.
+              </li>
+              <li>
+                (Optional) <strong>Read and change your bookmarks</strong>: Used to display your browser bookmarks on
+                the quick links widget, when enabled.
+              </li>
+            </ul>
+          </details>
+
+          <h4>Using the extension</h4>
+
+          <details>
+            <summary>How do I save my changes to settings?</summary>
+            <p>
+              Anytime you close the settings panel your changes are automatically saved. You can also click the save
+              button in the top right corner at any time to save without closing. In addition, some actions such as
+              adding or removing widgets will automatically save in that moment. You can revert some changes by simply
+              refreshing or closing the tab before closing the settings panel; anything that was changed since opening
+              the settings should revert back.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I sync my settings between browsers?</summary>
+            <p>
+              Settings sync is automatically enabled when you sign into your browser, providing the browser supports
+              syncing. Google Chrome and Microsoft Edge should both sync your settings when signed into each
+              respectively.
+            </p>
+            <p>It is currently not possible to sync your settings between different types of browsers.</p>
+            <p>
+              Another option available is exporting your settings from one browser and importing them to the other. This
+              option can be found in the Settings Dashboard, under "Extension settings", select "Advanced settings" and
+              you will see an Export and Import option. Note that this is a manual process and any time you make changes
+              to your settings you will want to perform the export/import process again.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I move a widget to a different spot?</summary>
+            <p>
+              Once you've added a widget, click the "edit" button on the dashboard then open the "Widget container"
+              section. In this area you can change the alignment, position, and size of the widget container. You may
+              need to play around with some of the options here to get what you are looking for as some may work
+              slightly different depending on the widget type.
+            </p>
+            <p>
+              Pro tip: Click the square icon in the top right corner of the settings panel near the save button to
+              enable the Outliner mode. This will temporarily display an outline around widgets giving you a better idea
+              of what the size and placement of the widget actually is. Also try the dotted grid icon next to it which
+              overlays a grid on the page to help with alignment.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why is the widget not showing on the page?</summary>
+            <p>
+              There are a few possibilities. First, make sure the widget is not disabled on the Settings Dashboard;
+              ensure the toggle is on next to the widget name in the list of widgets.
+            </p>
+            <p>
+              Second, you might need to try adjusting the options within the "Widget Container" section of the widget's
+              settings. The widget being set too small or large, or the position is too far one direction or the other,
+              could all contribute to the widget not being visible.
+            </p>
+            <p>
+              Finally, it could be the text color of the widget is the same or similar to the background color. Try
+              adjusting the color options under "Widget Font Styles".
+            </p>
+          </details>
+
+          <details>
+            <summary>Why is the shadow not showing?</summary>
+            <p>Be sure that the shadow is enabled via the "Enable" option at the top right of the shadow menu.</p>
+          </details>
+
+          <details>
+            <summary>The widgets don't seem to be matching with the size I set.</summary>
+            <p>
+              Different widgets may behave differently to the size options available. For example, you could set the
+              weather widget to a very small width in the container settings, but it still may display wider as the
+              content within will keep with the layout. This can cause the content to "overflow" the widget's container.
+            </p>
+            <p>
+              One way to avoid this when designing your tab is by clicking the square icon at the top right of the
+              Settings panel, it's the button to the right of the eye. Enabling this option will show an outline around
+              all widget containers, this makes it easy to tell if any content is overflowing. The option will
+              automatically be disabled when you open a new tab, or you can click it again to disable.
+            </p>
+            <p>
+              While you are here, try the next button to the right that looks like a dotted grid. This option overlays a
+              grid on the tab page, making it easy to align widgets.
+            </p>
+          </details>
+        </div>
+        <h3 class="largeHeadingMargin">Have a Question?</h3>
+        <p style="margin-bottom: 3rem">
+          <a href="/contact" class="btn"> Visit the Contact page to send a message </a>
+        </p>
+      </div>
+
+      <app-footer>
+        <div slot="pre">
+          <div class="getItBarFooter">
+            <a
+              href="https://chrome.google.com/webstore/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna"
+              ><img
+                src="/carettab/img/chrome-store.svg"
+                height="60"
+                alt="Chrome Web store icon with the text: 'Available in the Chrome Web Store'"
+            /></a>
+            <a
+              href="https://microsoftedge.microsoft.com/addons/detail/carettab-new-tab-clock-/bfpmncaohmjelebfobabccfjgmeolloe"
+              ><img
+                src="/carettab/img/edge-store.svg"
+                height="60"
+                alt="Edge Web store icon with the text: 'Get it for Microsoft Edge'"
+            /></a>
+          </div>
+          <h2 class="footerLogo">
+            <a href="/carettab">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" viewBox="0 0 500 369">
+                <path
+                  d="M20 332 201 18h99l181 314-10 19H334l-83-145-84 145H31l-11-19Zm32-7h101l87-150h21l87 150h101L286 43h-70L52 325Z"
+                />
+                <circle cx="208.3" cy="30.1" r="30.1" />
+                <circle cx="292.7" cy="30.1" r="30.1" />
+                <circle cx="250.6" cy="184" r="30.1" />
+                <circle cx="470.5" cy="338" r="30.1" />
+                <circle cx="340.8" cy="338.4" r="30.1" />
+                <circle cx="160.2" cy="338.4" r="30.1" />
+                <circle cx="30.7" cy="338" r="30.1" />
+              </svg>
+              <span>CaretTab</span>
+            </a>
+          </h2>
+        </div>
+      </app-footer>
+    </div>
+
+    <script type="module" src="/js/header.js"></script>
+    <script type="module" src="/js/footer.js"></script>
+  </body>
+</html>
