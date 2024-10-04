@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /contact/thanks
-Disallow: /contact/thanks/*
 Disallow: /404.html
+Disallow: /carettab/thank-you
+Disallow: /carettab/thank-you/*
