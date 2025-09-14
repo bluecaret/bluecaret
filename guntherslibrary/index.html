@@ -3,25 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gunther's Library - BlueCaret^</title>
+    <title>Gunther's Library | A Stardew Valley Companion App</title>
+    <meta
+      name="description"
+      content="A comprehensive Stardew Valley companion app designed to help you track progress, plan efficiently, and unlock every secret the valley has to offer."
+    />
+    <meta property="og:title" content="Gunther's Library | A Stardew Valley Companion App" />
+    <meta
+      property="og:description"
+      content="A comprehensive Stardew Valley companion app designed to help you track progress, plan efficiently, and unlock every secret the valley has to offer."
+    />
+    <meta name="apple-mobile-web-app-title" content="Gunther's Library | A Stardew Valley Companion App" />
+    <meta name="application-name" content="Gunther's Library | A Stardew Valley Companion App" />
+    <meta property="og:image" content="/assets/guntherslibrary-logo-full.png" />
+    <meta property="og:url" content="https://www.carettab.com" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="/styles.css?v=202307180833" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=XBbJ30mbK3" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=XBbJ30mbK3" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=XBbJ30mbK3" />
-    <link rel="manifest" href="/site.webmanifest?v=XBbJ30mbK3" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=XBbJ30mbK3" color="#5bbad5" />
-    <link rel="shortcut icon" href="/favicon.ico?v=XBbJ30mbK3" />
-    <meta name="apple-mobile-web-app-title" content="BlueCaret^" />
-    <meta name="application-name" content="BlueCaret^" />
-    <style>
-      .aboutMeImg {
-        float: right;
-        border-radius: 50%;
-        width: 12em;
-        height: auto;
-        margin: 2em;
-      }
-    </style>
+    <link rel="stylesheet" href="/guntherslibrary/style.css?v=202410040823" />
   </head>
   <body>
     <div id="app" class="app">
@@ -29,24 +27,228 @@
         <div class="container">
           <h1 class="logo">
             <a href="/guntherslibrary/">
-              <span>Gunther's Library</span>
+              <img src="/assets/guntherslibrary-logo-full.png" alt="Gunther's Library logo" />
             </a>
           </h1>
-          <div class="explanation">The ultimate companion app for Stardew Valley</div>
+          <div class="explanation">
+            A comprehensive Stardew Valley companion app designed to help you track progress, plan efficiently, and
+            unlock every secret the valley has to offer.
+          </div>
+          <div class="getItBar">
+            <a href="https://play.google.com/store/apps/details?id=com.guntherslibrary.app"
+              ><img src="/assets/google-play.png" alt="Google Play store icon with the text: 'Get it on Google Play'"
+            /></a>
+          </div>
         </div>
       </header>
 
-      <section>
-        <h2>Coming soon!<br />Stay tuned for more details.</h2>
-        <p>
-          <a href="/guntherslibrary/privacy">View privacy policy</a>
-        </p>
-      </section>
+      <div class="gallery container">
+        <native-gallery>
+          <img
+            src="/guntherslibrary/img/guntherslibrary-perfection.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'Track your progress to PERFECTION'"
+          />
+          <img
+            src="/guntherslibrary/img/guntherslibrary-farms.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'Keep track of multiple farms!"
+          />
+          <img
+            src="/guntherslibrary/img/guntherslibrary-shipped.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'Track all collections! Easily find items!'"
+          />
+          <img
+            src="/guntherslibrary/img/guntherslibrary-bundle.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'Complete all bundles, including remixed!'"
+          />
+          <img
+            src="/guntherslibrary/img/guntherslibrary-calendar.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'Remember key events and add custom reminders'"
+          />
+          <img
+            src="/guntherslibrary/img/guntherslibrary-fish.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'All the details you need about every item!'"
+          />
+          <img
+            src="/guntherslibrary/img/guntherslibrary-npc.png"
+            width="378"
+            height="800"
+            alt="Marketing image for Gunther's Library that says 'Villager gifts and schedules make friendship easy!'"
+          />
+        </native-gallery>
 
-      <app-footer></app-footer>
+        <div class="controls">
+          <button id="prev" aria-label="Previous screenshot">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+              <path
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
+              />
+            </svg>
+          </button>
+          <div id="current">1 / 5</div>
+          <button id="next" aria-label="Next screenshot">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+              <path
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="container features">
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Complete Item Database</h2>
+            <p>
+              Instant access to details and checklists for everything in the game: Shipped Items, Fish, Artifacts,
+              Minerals, Cooking & Crafting Recipes, Furniture, Buildings, Shops, Clothing, Weapons, Tools, Villagers,
+              Monsters, Pets, and Farm Animals.
+            </p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Perfection & Collection Trackers</h2>
+            <p>Track everything you’ve acquired and see what’s left to reach 100% completion.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Villager Gift Tastes & Schedules</h2>
+            <p>
+              Never miss a birthday or a chance to boost friendship—view accurate daily schedules for every character.
+            </p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Community Center & Joja Guide</h2>
+            <p>Bundle checklist and Joja route planning at your fingertips.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Golden Walnut Checklist</h2>
+            <p>Hunt down every last Golden Walnut on Ginger Island with ease.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Building & Upgrade Info</h2>
+            <p>Plan your farm layout with complete data on all buildings and upgrades.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Forge & Enchantments Guide</h2>
+            <p>Master the Volcano Forge with a breakdown of all weapon and tool enchantments.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Achievements List</h2>
+            <p>Browse and track every in-game achievement as you complete them.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Skills Tracker</h2>
+            <p>Track your skill progress and view unlocks for every level.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Custom Notes, To-Do List &amp; Calendar</h2>
+            <p>Plan your seasons with personal notes, a fully editable calendar, and daily to-do lists.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Multiple Farm Support</h2>
+            <p>Manage and track progress across all your farms.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Global Search</h2>
+            <p>Quickly find any item, villager, or topic in seconds.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Offline & Private</h2>
+            <p>
+              Works entirely offline—no internet required and no data is ever collected, stored, or sent anywhere. Your
+              privacy is fully protected.
+            </p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Premium access</h2>
+            <p>
+              Premium access unlocks advanced features like the Perfection Tracker, Notes, Calendar, To-Do Lists, and
+              Multiple Farm Support. Available as a one-time in-app purchase.
+            </p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="featureContent">
+            <h2>Get Started</h2>
+            <p>Your journey to Perfection just got easier. Download now and make every day in Stardew Valley count!</p>
+          </div>
+        </div>
+        <div class="feature helpBoxWrapper">
+          <div class="helpBox">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!-- 
+              Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.
+              -->
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+              />
+            </svg>
+            <div>
+              <h2>Have a question?</h2>
+              <p>Contact us with any questions.</p>
+              <p class="questionLinks">
+                <a href="/contact" class="btn"> Contact page </a>
+                <a href="/guntherslibrary/privacy" class="btn"> Privacy policy </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-footer>
+        <div slot="pre">
+          <div class="getItBarFooter">
+            <a href="https://play.google.com/store/apps/details?id=com.guntherslibrary.app"
+              ><img src="/assets/google-play.png" alt="Google Play store icon with the text: 'Get it on Google Play'"
+            /></a>
+          </div>
+          <h2 class="footerLogo">
+            <a href="/guntherslibrary">
+              <img src="/assets/guntherslibrary-logo-full.png" alt="Gunther's Library logo" />
+            </a>
+          </h2>
+        </div>
+      </app-footer>
     </div>
 
     <script type="module" src="/js/header.js"></script>
     <script type="module" src="/js/footer.js"></script>
+    <script type="module" src="/js/gallery.js"></script>
   </body>
 </html>

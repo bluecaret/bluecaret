@@ -77,6 +77,7 @@ class AppFooter extends HTMLElement {
             <a href="/terms">Terms of Use</a>
           </div>
           <div class="footerLinks">
+            <a href="/guntherslibrary">Gunther's Library</a>
             <a href="/carettab">CaretTab</a>
             <!--<a href="/two-steps-forward">Two Steps Forward</a>-->
             <a href="/patterns">Patterns</a>

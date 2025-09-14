@@ -1,0 +1,268 @@
+.getItBarFooter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.getItBarFooter a {
+}
+
+.getItBarFooter a img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 400;
+  color: black;
+  margin: 2rem auto 1rem;
+  padding: 0 0 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 400px) {
+    font-size: 14dvw;
+  }
+}
+
+.footerLogo a {
+  text-decoration: none;
+}
+
+.footerLogo span {
+  color: black;
+}
+
+.footerLogo img {
+  width: 100%;
+  max-width: 354px;
+  height: auto;
+}
+
+.header.mainpage {
+  padding: 3rem 0 18rem;
+}
+
+@media screen and (max-width: 1099px) {
+  .header.mainpage {
+    padding: 3rem 0 7rem;
+    background: var(--b1);
+    background: linear-gradient(to bottom, var(--b1), var(--b2));
+    mask: unset;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header.mainpage {
+    padding: 3rem 0 1rem;
+  }
+}
+
+.mainpage .logo {
+  font-size: 6rem;
+  margin: 0 auto 2rem;
+  justify-content: center;
+
+  @media screen and (max-width: 719px) {
+    font-size: 14dvw;
+  }
+}
+
+.logo img {
+  width: 100%;
+  max-width: 354px;
+  height: auto;
+}
+
+.explanation {
+  font-weight: 200;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+p.explanation2 {
+  margin: 2rem 0;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: 400;
+  color: black;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: black;
+}
+
+.getItBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  margin-block-end: 2rem;
+}
+
+.getItBar a {
+  display: inline-grid;
+  place-items: center;
+}
+
+.getItBar a img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.gallery {
+  position: relative;
+  z-index: +1;
+  margin-top: -6rem;
+  width: min(30rem, calc(100% - 3rem));
+  padding: .5rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(100%) blur(5px);
+  border-radius: .8rem;
+}
+
+@media screen and (max-width: 599px) {
+  .gallery {
+    margin-top: 0rem;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .gallery {
+    margin-top: -16rem;
+    padding: 3rem 3rem .5rem;
+  }
+}
+
+native-gallery {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: .6rem;
+}
+
+native-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+native-gallery:not(.-loaded) [loading="lazy"] {
+  /* without display none images with loading="lazy" are loaded immediately */
+  display: none;
+}
+
+native-gallery img {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+  scroll-snap-align: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 .5rem;
+}
+
+.controls button {
+  background: var(--b1);
+  border-radius: .4rem;
+  border: 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  transition: filter .3s;
+  display: grid;
+  place-items: center;
+}
+
+.controls button svg {
+  height: .8em;
+  width: auto;
+}
+
+.controls button:hover {
+  filter: brightness(1.4);
+}
+
+.controls button:active {
+  filter: brightness(.8);
+}
+
+.privacy img {
+  @media screen and (min-width: 720px) {
+    order: 1;
+  }
+}
+
+.featuresAreFree {
+  justify-content: center;
+  margin: 0 0 3rem;
+
+  >* {
+    max-width: 40rem;
+  }
+}
+
+.helpBoxWrapper {
+  justify-content: center;
+  margin: 1rem 0 0;
+}
+
+.helpBox {
+  max-width: 40rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: .6rem;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--b3);
+
+  svg {
+    width: 2rem;
+    height: auto;
+    fill: currentColor;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin: .5rem 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.questionLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

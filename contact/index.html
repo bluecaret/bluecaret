@@ -23,6 +23,7 @@
         font-size: 0.9rem;
       }
       .form-group input,
+      .form-group select,
       .form-group textarea {
         width: 100%;
         padding: 0.8rem;
@@ -82,6 +83,15 @@
             <input type="email" id="email" name="email" class="form-control" required />
           </div>
           <div class="form-group">
+            <label for="subject">What are you contacting us about?</label>
+            <select id="subject" name="subject" class="form-control" required>
+              <option value=""></option>
+              <option value="CaretTab">CaretTab - New Tab Extension</option>
+              <option value="Gunthers Library">Gunther's Library - Stardew Valley Companion App</option>
+              <option value="general inquiry">General inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="message">Your message:</label>
             <textarea
               class="form-control"
@@ -117,13 +127,15 @@
         if (
           document.getElementById('name').value.trim() &&
           document.getElementById('email').value.trim() &&
-          document.getElementById('message').value.trim()
+          document.getElementById('message').value.trim() &&
+          document.getElementById('subject').value.trim()
         ) {
           const formData = {
             site: 'BlueCaret',
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             message: document.getElementById('message').value,
+            subject: document.getElementById('subject').value,
           }
 
           fetch('https://vzyoaxqaw4.execute-api.us-west-2.amazonaws.com/v1/contactForm', {
