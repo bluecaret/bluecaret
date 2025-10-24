@@ -1,0 +1,46 @@
+{
+  "short_name": "Gunther's Library",
+  "name": "Gunther's Library: A Stardew Valley Companion App",
+  "icons": [
+    {
+      "src": "./web-icon-16.png",
+      "type": "image/png",
+      "sizes": "16x16",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./web-icon-32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./web-icon-64.png",
+      "type": "image/png",
+      "sizes": "64x64",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./web-icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./web-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./web-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/guntherslibrary/app/",
+  "scope": "/guntherslibrary/app/",
+  "display": "standalone",
+  "background_color": "#32611f"
+}
