@@ -1,106 +1,151 @@
-.getItBarFooter {
+.appIcon {
+  --size: 1.6rem;
+  --x: 0;
+  --y: 0;
+  --adjust: 1;
+  display: inline-grid;
+  place-items: center;
+  width: calc(var(--size) * var(--adjust));
+  height: calc(var(--size) * var(--adjust));
+  background-color: transparent;
+  background-image: url('img/ui/icons.png');
+  background-repeat: no-repeat;
+  background-size: calc(var(--size) * 20);
+  background-position: calc(calc(var(--x) * var(--size)) * -1) calc(calc(var(--y) * var(--size)) * -1);
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+  image-rendering: pixelated;
+  user-select: none;
+
+  &.trim {
+    margin-block: calc(calc(var(--size) / 5) * -1);
+  }
+}
+
+.museumGraphic {
+  position: relative;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1rem;
+  align-items: flex-end;
+  width: 24rem;
+  @media (max-width: 32rem) {
+    justify-self: center;
+  }
 }
 
-.getItBarFooter a {
-}
-
-.getItBarFooter a img {
-  display: block;
-  width: 200px;
-  height: auto;
-}
-
-.footerLogo {
+main {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0 1.2rem;
+}
+
+.mainWidth {
+  width: 100%;
+  max-width: min(60ch, 80rem);
+  margin-inline: auto;
+}
+
+footer {
+  margin-block-start: auto;
+  padding-block-start: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  @media (max-width: 32rem) {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}
+
+.footerContent .footerContentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 400;
-  color: black;
-  margin: 2rem auto 1rem;
-  padding: 0 0 3rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-  @media screen and (max-width: 400px) {
-    font-size: 14dvw;
+  text-align: center;
+  .copyright {
+    font-size: 1.4rem;
+  }
+  .concernedape {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  .designedBy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-block: 0 1.2rem;
+  }
+  .bluecaretLogo {
+    width: 100%;
+    height: auto;
+    max-width: 10rem;
+  }
+  .bmc {
+    display: inline-block;
+    margin-block-end: .6rem;
+    img {
+      display: block;
+      width: auto;
+      height: 28px;
+    }
   }
 }
 
-.footerLogo a {
-  text-decoration: none;
-}
-
-.footerLogo span {
-  color: black;
-}
-
-.footerLogo img {
-  width: 100%;
-  max-width: 354px;
-  height: auto;
-}
-
-.header.mainpage {
-  padding: 3rem 0 18rem;
-}
-
-@media screen and (max-width: 1099px) {
-  .header.mainpage {
-    padding: 3rem 0 7rem;
-    background: var(--b1);
-    background: linear-gradient(to bottom, var(--b1), var(--b2));
-    mask: unset;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  .header.mainpage {
-    padding: 3rem 0 1rem;
-  }
-}
-
-.mainpage .logo {
-  font-size: 6rem;
-  margin: 0 auto 2rem;
-  justify-content: center;
-
-  @media screen and (max-width: 719px) {
-    font-size: 14dvw;
+.logo {
+  display: block;
+  margin-block: 2.4rem 0;
+  font-size: inherit;
+  & a {
+    display: block;
+    margin-inline: auto;
+    text-align: center;
   }
 }
 
 .logo img {
   width: 100%;
-  max-width: 354px;
+  /* max-width: calc(354px * 1.5); */
   height: auto;
+  margin-inline: auto;
+  image-rendering: pixelated;
+}
+
+.slogan,
+.heading {
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 400;
+  /* font-style: italic; */
+  text-align: center;
+  font-family: 'Stardew Valley';
+}
+.slogan {
+  margin-block-end: -1.4rem;
 }
 
 .explanation {
-  font-weight: 200;
-  text-align: center;
-  margin-block-end: 1rem;
-}
-
-p.explanation2 {
-  margin: 2rem 0;
-  font-size: 1.2em;
-  line-height: 1.5;
+  font-size: 2rem;
+  font-style: italic;
   font-weight: 400;
+  text-wrap: balance;
+  text-align: center;
   color: black;
-}
-
-.slogan {
-  margin: 0;
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: black;
+  @media (max-width: 28rem) {
+    font-size: 1.8rem;
+  }
 }
 
 .getItBar {
@@ -109,7 +154,6 @@ p.explanation2 {
   flex-wrap: wrap;
   align-items: center;
   gap: .5rem;
-  margin-block-end: 2rem;
 }
 
 .getItBar a {
@@ -121,169 +165,145 @@ p.explanation2 {
   display: block;
   width: auto;
   height: 52px;
+  image-rendering: optimizeQuality;
 }
 
-.getItBar a.btn {
+.getItBar a.getItBarBtn {
   min-height: 52px;
   background-color: black;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  align-items: center;
   text-align: left;
   line-height: 1.1;
+  padding: .4rem 1rem;
   padding-block: .4rem;
-  gap: 0;
-  > * {
+  gap: 0.6em;
+  text-decoration: none;
+  border-radius: 1rem;
+  border: .15rem solid #a6a6a6;
+  font-weight: 400;
+  cursor: pointer;
+  .getItBarBtnContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     text-align: left;
+    gap: .2em;
+    > small {
+      font-size: 1rem;
+    }
   }
-  > small {
-    font-size: 0.8rem;
-  }
+}
+
+.galleryWrapper {
+  width: 100%;
+  max-width: min(100ch, 120rem);
+  margin-inline: auto;
 }
 
 .gallery {
-  position: relative;
-  z-index: +1;
-  margin-top: -6rem;
-  width: min(30rem, calc(100% - 3rem));
-  padding: .5rem;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: saturate(100%) blur(5px);
-  border-radius: .8rem;
-}
-
-@media screen and (max-width: 599px) {
-  .gallery {
-    margin-top: 0rem;
-    width: 100%;
-    border-radius: 0;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .gallery {
-    margin-top: -16rem;
-    padding: 3rem 3rem .5rem;
-  }
-}
-
-native-gallery {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  border-radius: .6rem;
-}
-
-native-gallery::-webkit-scrollbar {
-  display: none;
-}
-
-native-gallery:not(.-loaded) [loading="lazy"] {
-  /* without display none images with loading="lazy" are loaded immediately */
-  display: none;
-}
-
-native-gallery img {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  -webkit-user-drag: none;
-  user-select: none;
-  scroll-snap-align: center;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0 .5rem;
-}
-
-.controls button {
-  background: var(--b1);
-  border-radius: .4rem;
-  border: 0;
-  color: var(--text);
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: .5rem 2rem;
-  cursor: pointer;
-  transition: filter .3s;
   display: grid;
-  place-items: center;
-}
-
-.controls button svg {
-  height: .8em;
-  width: auto;
-}
-
-.controls button:hover {
-  filter: brightness(1.4);
-}
-
-.controls button:active {
-  filter: brightness(.8);
-}
-
-.privacy img {
-  @media screen and (min-width: 720px) {
-    order: 1;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.2rem;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.2rem;
+    cursor: pointer;
+  }
+  .box.twigs {
+    padding: 1rem 1.4rem;
   }
 }
 
-.featuresAreFree {
-  justify-content: center;
-  margin: 0 0 3rem;
+dialog.iconPopover {
+  /* position: fixed; */
+  /* inset: 0; */
+  padding: 0;
+}
 
-  >* {
-    max-width: 40rem;
+dialog.iconPopover::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+dialog.iconPopover {
+  position: fixed;
+  .iconPopoverInner {
+    padding: .8rem;
   }
 }
 
-.helpBoxWrapper {
+#dialogImage {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: .8rem;
+  > div.box {
+    padding: 2.4rem;
+    & h2 {
+      font-size: 1.6rem;
+      margin-block-end: .8rem;
+    }
+    & p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.3;
+      text-align: center;
+    }
+  }
+}
+
+.featureIcon {
+  height: 4.8rem;
+  display: flex;
   justify-content: center;
-  margin: 1rem 0 0;
+  align-items: center;
+}
+
+.testimonials {
+  width: 100%;
+  max-width: min(100ch, 120rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  @media (max-width: 36rem) {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    & p {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+  .rating {
+    margin-block: .4rem .6rem;
+  }
 }
 
 .helpBox {
-  max-width: 40rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  border-radius: .6rem;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: var(--b3);
-
-  svg {
-    width: 2rem;
-    height: auto;
-    fill: currentColor;
-  }
-
-  h2 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-
-  p {
-    margin: .5rem 0 0;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-}
-
-.questionLinks {
+  margin-block-start: -1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    min-height: 5rem;
+    padding-inline: 2rem;
+    font-size: 1.6rem;
+  }
 }
