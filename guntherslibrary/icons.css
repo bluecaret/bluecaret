@@ -1,0 +1,65 @@
+.gunther {
+  position: absolute;
+  z-index: 11;
+  bottom: 0;
+  left: 13rem;
+  --gunther-size: 3rem;
+  display: inline-grid;
+  place-items: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+  image-rendering: pixelated;
+  width: var(--gunther-size);
+  aspect-ratio: 1 / 2;
+  background-image: url('img/ui/gunther-spritesheet-no-spurs.png');
+  background-size: calc(var(--gunther-size) * 4) auto;
+
+  &[data-icon='1'] {
+    background-position: 0 0;
+  }
+
+  &[data-icon='2'] {
+    background-position: calc(-1 * var(--gunther-size)) 0;
+  }
+
+  &[data-icon='3'] {
+    background-position: calc(-2 * var(--gunther-size)) 0;
+  }
+
+  &[data-icon='4'] {
+    background-position: calc(-3 * var(--gunther-size)) 0;
+  }
+
+  &[data-icon='5'] {
+    background-position: 0 calc(-1 * calc(var(--gunther-size) * 2));
+  }
+
+  &[data-icon='6'] {
+    background-position: 0 calc(-2 * calc(var(--gunther-size) * 2));
+  }
+
+  &[data-icon='7'] {
+    background-position: 0 calc(-3 * calc(var(--gunther-size) * 2));
+  }
+}
+
+.museum {
+  --museum-size: 24rem;
+  display: inline-grid;
+  place-items: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+  image-rendering: pixelated;
+  width: var(--museum-size);
+  aspect-ratio: 1.125 / 1;
+  background-image: url('img/ui/museum.png');
+  background-size: calc(var(--museum-size) * 1) auto;
+}

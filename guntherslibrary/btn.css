@@ -1,0 +1,623 @@
+.btn {
+  position: relative;
+  display: flex;
+  gap: 0.3em;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0;
+  border-style: solid;
+  background-color: transparent;
+  font: var(--fontRegular);
+  color: var(--textDark);
+  cursor: pointer;
+  border-image-source: url('img/ui/btn-primary.png');
+  border-image-width: 1.6rem;
+  border-image-slice: 7 fill;
+  border-image-repeat: round;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-primary-dark.png');
+  }
+
+  &.active {
+    border-image-source: url('img/ui/btn-active.png');
+    color: var(--textDark);
+
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-active-dark.png');
+    }
+
+    button&:hover {
+      color: var(--textDark);
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-active-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-active-pressed.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-pressed-dark.png');
+      }
+    }
+  }
+
+  button&:hover {
+    color: var(--text);
+  }
+
+  /* Added to force preloading of focus and active images */
+  button&::before,
+  button&::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  button&::before,
+  button&:focus-visible {
+    outline: none;
+    border-image-source: url('img/ui/btn-primary-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-primary-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    background-color: transparent;
+    border-image-source: url('img/ui/btn-primary-pressed.png');
+    translate: 0 1px;
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-primary-pressed-dark.png');
+    }
+  }
+
+  > .appIcon {
+    flex: 0 0 auto;
+  }
+}
+
+.btn.small {
+  min-height: 2.8rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.btn.primary {
+  color: var(--textDark);
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  &.active {
+    border-image-source: url('img/ui/btn-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-active-dark.png');
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-active-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-active-pressed.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-pressed-dark.png');
+      }
+    }
+  }
+}
+
+.btn.secondary {
+  border-image-source: url('img/ui/btn-secondary.png');
+  color: var(--textLight);
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-secondary-dark.png');
+    color: var(--text);
+  }
+
+  button&:hover {
+    color: var(--textLight);
+    .theme-dark & {
+      color: var(--text);
+    }
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/btn-secondary-focus.png');
+    color: var(--textLight);
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-secondary-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/btn-secondary-pressed.png');
+    color: var(--textLight);
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-secondary-pressed-dark.png');
+    }
+  }
+  
+  &.active {
+    border-image-source: url('img/ui/btn-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-active-dark.png');
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-active-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-active-pressed.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-pressed-dark.png');
+      }
+    }
+  }
+}
+
+.btn.tertiary {
+  border-image-source: url('img/ui/btn-tertiary.png');
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-tertiary-dark.png');
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/btn-tertiary-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-tertiary-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/btn-tertiary-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-tertiary-pressed-dark.png');
+    }
+  }
+  
+  &.active {
+    border-image-source: url('img/ui/btn-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-active-dark.png');
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-active-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-active-pressed.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-pressed-dark.png');
+      }
+    }
+  }
+}
+
+.btn.neon {
+  border-image-source: url('img/ui/btn-neon.png');
+  color: var(--textLight);
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-neon-dark.png');
+    color: var(--text);
+  }
+
+  button&:hover {
+    color: var(--textLight);
+    .theme-dark & {
+      color: var(--text);
+    }
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/btn-neon-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-neon-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/btn-neon-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-neon-pressed-dark.png');
+    }
+  }
+  
+  &.active {
+    border-image-source: url('img/ui/btn-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-active-dark.png');
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-active-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-active-pressed.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-active-pressed-dark.png');
+      }
+    }
+  }
+}
+
+.btn.boxRounded {
+  border-image-source: url('img/ui/box-rounded.png');
+  color: var(--textDark);
+  padding: 1.2rem;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/box-rounded-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/box-rounded-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-rounded-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/box-rounded-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-rounded-pressed-dark.png');
+    }
+  }
+  
+  &.active:not(:focus-visible, :active) {
+    border-image-source: url('img/ui/box-rounded-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-rounded-active-dark.png');
+    }
+  }
+}
+
+.btn.boxLight {
+  border-image-source: url('img/ui/box-light.png');
+  color: var(--textDark);
+  padding: 1.2rem;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/box-light-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/box-light-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-light-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/box-light-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-light-pressed-dark.png');
+    }
+  }
+  
+  &.active:not(:focus-visible, :active) {
+    border-image-source: url('img/ui/box-light-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-light-active-dark.png');
+    }
+  }
+}
+
+.btn.tag {
+  border-image-source: url('img/ui/tag-link.png');
+  border-image-width: 1.5rem;
+  border-image-slice: 7 fill;
+  color: var(--textDark);
+  padding: 0.4rem 1.2rem 0.4rem 0.6rem;
+  text-align: left;
+  max-width: 100%;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/tag-link-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/tag-link-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/tag-link-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/tag-link-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/tag-link-pressed-dark.png');
+    }
+  }
+}
+
+.btn.boxGold {
+  border-image-source: url('img/ui/box-gold.png');
+  color: var(--textDark);
+  padding: 1.2rem;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/box-gold-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/box-gold-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-gold-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/box-gold-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-gold-pressed-dark.png');
+    }
+  }
+  
+  &.active:not(:focus-visible, :active) {
+    border-image-source: url('img/ui/box-gold-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-gold-active-dark.png');
+    }
+  }
+}
+
+.btn.boxGoldRounded {
+  border-image-source: url('img/ui/box-gold-rounded.png');
+  color: var(--textDark);
+  padding: 1.2rem;
+  .theme-dark & {
+    border-image-source: url('img/ui/box-gold-rounded-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/box-gold-rounded-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-gold-rounded-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/box-gold-rounded-pressed.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-gold-rounded-pressed-dark.png');
+    }
+  }
+  
+  &.active:not(:focus-visible, :active) {
+    border-image-source: url('img/ui/box-gold-rounded-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/box-gold-rounded-active-dark.png');
+    }
+  }
+}
+
+.btn[disabled] {
+  border-image-source: url('img/ui/btn-disabled.png');
+  border-image-width: 1.2rem;
+  border-image-slice: 5 fill;
+  border-image-repeat: round;
+  cursor: not-allowed;
+  color: var(--textDisabled);
+  filter: grayscale(.5);
+
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-disabled-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDisabled);
+  }
+
+  button&:focus-visible {
+    border-image-source: url('img/ui/btn-disabled.png');
+  }
+
+  button&:active {
+    border-image-source: url('img/ui/btn-disabled.png');
+    translate: 0;
+  }
+}
+
+.btn.bundleItem {
+  border-image-source: url('img/ui/btn-bundle-item.png');
+  border-image-width: .9rem;
+  border-image-slice: 3 fill;
+  color: var(--textDark);
+  padding: .9rem;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-bundle-item-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+    }
+    color: var(--textDark);
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+    color: var(--textDark);
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+    }
+  }
+  
+  &.active {
+    border-image-source: url('img/ui/btn-bundle-item-active.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-bundle-item-active-dark.png');
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+      }
+    }
+  }
+}
+
+.btn.bundleSlot {
+  border-image-source: url('img/ui/btn-bundle-slot.png');
+  border-image-width: .9rem;
+  border-image-slice: 3 fill;
+  color: var(--textDark);
+  padding: .9rem;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/btn-bundle-slot-dark.png');
+  }
+
+  button&:hover {
+    color: var(--textDark);
+  }
+
+  button&::before,
+  button&:focus-visible {
+    border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+    color: var(--textDark);
+
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+    }
+  }
+
+  button&::after,
+  button&:active {
+    border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+    color: var(--textDark);
+
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+    }
+  }
+  
+  &.active {
+    border-image-source: url('img/ui/btn-bundle-slot-active.png');
+
+    .theme-dark & {
+      border-image-source: url('img/ui/btn-bundle-slot-active-dark.png');
+    }
+
+    button&::before,
+    button&:focus-visible {
+      border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+      }
+    }
+
+    button&::after,
+    button&:active {
+      border-image-source: url('img/ui/btn-bundle-slot-focus.png');
+      .theme-dark & {
+        border-image-source: url('img/ui/btn-bundle-slot-focus-dark.png');
+      }
+    }
+  }
+}
+
+.btn.block {
+  width: 100%;
+}
+
+.btn.left {
+  justify-content: start;
+  text-align: left;
+}
+
+.btn.btnText {
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: auto;
+}

@@ -1,0 +1,190 @@
+.input,
+.select,
+.range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  width: 100%;
+  min-height: 3.6rem;
+  padding: 0.7rem 1.2rem;
+  background-color: transparent;
+  border: 0;
+  border-style: solid;
+  font: var(--fontRegular);
+  line-height: 1.4;
+  color: var(--text);
+  border-image-width: 0.8rem;
+  border-image-slice: 4 fill;
+  border-image-repeat: repeat;
+
+  /* Added to force preloading of focus and active images */
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  &[readonly] {
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  border-image-source: url('img/ui/field-input.png');
+
+  .theme-dark & {
+    border-image-source: url('img/ui/field-input-dark.png');
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+
+  &::before,
+  &:focus-visible {
+    border-image-source: url('img/ui/field-input-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/field-input-focus-dark.png');
+    }
+  }
+
+  &::after,
+  &.disabled,
+  &[disabled],
+  &[readonly] {
+    border-image-source: url('img/ui/field-input-disabled.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/field-input-disabled-dark.png');
+    }
+  }
+}
+
+.select {
+  padding-block: 0.8rem;
+  padding-right: 2.5rem;
+  border-image-source: url('img/ui/field-select.png');
+  border-image-width: 0.8rem 2.8rem 0.8rem 0.8rem;
+  border-image-slice: 4 14 4 4 fill;
+  border-image-repeat: repeat stretch;
+
+  .theme-dark & {
+    border-image-source: url('img/ui/field-select-dark.png');
+  }
+
+  &::before,
+  &:focus-visible {
+    border-image-source: url('img/ui/field-select-focus.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/field-select-focus-dark.png');
+    }
+  }
+
+  &::after,
+  &.disabled,
+  &[disabled],
+  &[readonly] {
+    opacity: 1;
+    border-image-source: url('img/ui/field-select-disabled.png');
+    .theme-dark & {
+      border-image-source: url('img/ui/field-select-disabled-dark.png');
+    }
+  }
+
+  &::after {
+    opacity: 0;
+  }
+}
+
+.range {
+  padding: 0;
+  padding-block: 0.4rem;
+
+  &::-webkit-slider-runnable-track {
+    background-color: transparent;
+    border-image-source: url('img/ui/field-range-bar.png');
+    border-image-width: 1.2rem;
+    border-image-slice: 4 fill;
+    border-image-repeat: repeat;
+    height: 3.2rem;
+  }
+  .theme-dark & {
+    &::-webkit-slider-runnable-track {
+      border-image-source: url('img/ui/field-range-bar-dark.png');
+    }
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 4.4rem;
+    height: 3.2rem;
+    border: 0;
+    border-style: solid;
+    background-color: transparent;
+    border-image-source: url('img/ui/field-range-handle.png');
+    border-image-width: 1.2rem;
+    border-image-slice: 4 fill;
+    border-image-repeat: repeat;
+  }
+  .theme-dark & {
+    &::-webkit-slider-thumb {
+      border-image-source: url('img/ui/field-range-handle-dark.png');
+    }
+  }
+
+  &::before,
+  &:focus-visible {
+    &::-webkit-slider-runnable-track {
+      border-image-source: url('img/ui/field-range-bar-focus.png');
+    }
+    .theme-dark & {
+      &::-webkit-slider-runnable-track {
+        border-image-source: url('img/ui/field-range-bar-focus-dark.png');
+      }
+    }
+
+    &::-webkit-slider-thumb {
+      border-image-source: url('img/ui/field-range-handle-focus.png');
+    }
+    .theme-dark & {
+      &::-webkit-slider-thumb {
+        border-image-source: url('img/ui/field-range-handle-focus-dark.png');
+      }
+    }
+  }
+
+  &::after,
+  &.disabled,
+  &[disabled],
+  &[readonly] {
+    pointer-events: none;
+
+    &::-webkit-slider-runnable-track {
+      border-image-source: url('img/ui/field-range-bar-disabled.png');
+    }
+    .theme-dark & {
+      &::-webkit-slider-runnable-track {
+        border-image-source: url('img/ui/field-range-bar-disabled-dark.png');
+      }
+    }
+
+    &::-webkit-slider-thumb {
+      border-image-source: url('img/ui/field-range-handle-disabled.png');
+    }
+    .theme-dark & {
+      &::-webkit-slider-thumb {
+        border-image-source: url('img/ui/field-range-handle-disabled-dark.png');
+      }
+    }
+  }
+}

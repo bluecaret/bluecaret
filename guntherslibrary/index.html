@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,239 +18,422 @@
     <meta property="og:image" content="/assets/guntherslibrary-logo-full.png" />
     <meta property="og:url" content="https://www.carettab.com" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=202307180833" />
-    <link rel="stylesheet" href="/guntherslibrary/style.css?v=202410040823" />
+    <!-- <link rel="stylesheet" href="/styles.css?v=202307180833" /> -->
+    <link rel="stylesheet" href="/guntherslibrary/style.css?v=202501241716" />
+    <link rel="stylesheet" href="/guntherslibrary/main.css?v=202501241716" />
   </head>
   <body>
-    <div id="app" class="app">
-      <header class="header mainpage">
-        <div class="container">
-          <h1 class="logo">
-            <a href="/guntherslibrary/">
-              <img src="/assets/guntherslibrary-logo-full.png" alt="Gunther's Library logo" />
-            </a>
-          </h1>
-          <div class="explanation">
-            A comprehensive Stardew Valley companion app designed to help you track progress, plan efficiently, and
-            unlock every secret the valley has to offer.
-          </div>
-          <div class="getItBar">
-            <a href="https://apps.apple.com/app/id6754466392"
-              ><img src="/assets/app-store.svg" alt="App Store icon with the text: 'Download on the App Store'"
-            /></a>
-            <a href="https://play.google.com/store/apps/details?id=com.guntherslibrary.app"
-              ><img src="/assets/google-play.png" alt="Google Play store icon with the text: 'Get it on Google Play'"
-            /></a>
-            <a href="https://guntherslibrary.netlify.app/" class="btn">
+    <main>
+      <h1 class="logo mainWidth">
+        <a href="/guntherslibrary/">
+          <img src="img/guntherslibrary-logo-full.png" alt="Gunther's Library logo" />
+        </a>
+      </h1>
+      <div class="slogan mainWidth">An Unofficial Stardew Valley Guide App</div>
+      <div class="explanation mainWidth">
+        A comprehensive companion app designed to help you track progress, plan efficiently, and unlock every secret the
+        valley has to offer.
+      </div>
+      <div class="box redMetal mainWidth" aria-label="Get the app">
+        <div class="getItBar">
+          <a href="https://apps.apple.com/app/id6754466392">
+            <img src="/assets/app-store.svg" alt="App Store icon with the text: 'Download on the App Store'" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.guntherslibrary.app">
+            <img src="/assets/google-play.png" alt="Google Play store icon with the text: 'Get it on Google Play'" />
+          </a>
+          <a href="https://guntherslibrary.netlify.app/" class="getItBarBtn">
+            <div class="appIcon" aria-hidden="true" style="--x: 6; --y: 8; --size: 3.2rem"></div>
+            <div class="getItBarBtnContent">
               <div>Get it on the Web</div>
-              <small>guntherslibrary.netlify.app</small></a
-            >
-          </div>
-        </div>
-      </header>
-
-      <div class="gallery container">
-        <native-gallery>
-          <img
-            src="/guntherslibrary/img/01.png"
-            width="378"
-            height="800"
-            alt="Marketing image for Gunther's Library that says 'Track your game progress across multiple farms!'"
-          />
-          <img
-            src="/guntherslibrary/img/02.png"
-            width="378"
-            height="800"
-            alt="Marketing image for Gunther's Library that says 'Reach perfection with ease using the tracker!"
-          />
-          <img
-            src="/guntherslibrary/img/03.png"
-            width="378"
-            height="800"
-            alt="Marketing image for Gunther's Library that says 'Keep tabs on your favorite villagers!'"
-          />
-          <img
-            src="/guntherslibrary/img/04.png"
-            width="378"
-            height="800"
-            alt="Marketing image for Gunther's Library that says 'Quickly discover the secrets to each item!'"
-          />
-          <img
-            src="/guntherslibrary/img/05.png"
-            width="378"
-            height="800"
-            alt="Marketing image for Gunther's Library that says 'Never forget birthdays, festivals or special events!'"
-          />
-        </native-gallery>
-
-        <div class="controls">
-          <button id="prev" aria-label="Previous screenshot">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-              <path
-                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
-              />
-            </svg>
-          </button>
-          <div id="current">1 / 5</div>
-          <button id="next" aria-label="Next screenshot">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-              <path
-                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-              />
-            </svg>
-          </button>
+              <small>guntherslibrary.netlify.app</small>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="container features">
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Complete Item Database</h2>
-            <p>
-              Instant access to details and checklists for everything in the game: Shipped Items, Fish, Artifacts,
-              Minerals, Cooking & Crafting Recipes, Furniture, Buildings, Shops, Clothing, Weapons, Tools, Villagers,
-              Monsters, Pets, and Farm Animals.
-            </p>
+      <div class="galleryWrapper">
+        <div class="gallery">
+          <div class="box twigs">
+            <img
+              src="/guntherslibrary/img/01.png"
+              data-full="/guntherslibrary/img/01.png"
+              alt="Marketing image for Gunther's Library that says 'Track your game progress across multiple farms!'"
+            />
+          </div>
+          <div class="box twigs">
+            <img
+              src="/guntherslibrary/img/02.png"
+              data-full="/guntherslibrary/img/02.png"
+              alt="Marketing image for Gunther's Library that says 'Reach perfection with ease using the tracker!'"
+            />
+          </div>
+          <div class="box twigs">
+            <img
+              src="/guntherslibrary/img/03.png"
+              data-full="/guntherslibrary/img/03.png"
+              alt="Marketing image for Gunther's Library that says 'Keep tabs on your favorite villagers!'"
+            />
+          </div>
+          <div class="box twigs">
+            <img
+              src="/guntherslibrary/img/04.png"
+              data-full="/guntherslibrary/img/04.png"
+              alt="Marketing image for Gunther's Library that says 'Quickly discover the secrets to each item!'"
+            />
+          </div>
+          <div class="box twigs">
+            <img
+              src="/guntherslibrary/img/05.png"
+              data-full="/guntherslibrary/img/05.png"
+              alt="Marketing image for Gunther's Library that says 'Never forget birthdays, festivals or special events!'"
+            />
           </div>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Perfection & Collection Trackers</h2>
-            <p>Track everything you’ve acquired and see what’s left to reach 100% completion.</p>
+
+        <dialog id="imageDialog" class="iconPopover">
+          <div class="iconPopoverInner">
+            <button popovertarget="imageDialog" popovertargetaction="hide" class="close">
+              <div class="appIcon" aria-hidden="true" style="--x: 12; --y: 4; --size: 2.4rem"></div>
+            </button>
+            <img id="dialogImage" alt="" />
           </div>
-        </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Villager Gift Tastes & Schedules</h2>
-            <p>
-              Never miss a birthday or a chance to boost friendship—view accurate daily schedules for every character.
-            </p>
+        </dialog>
+      </div>
+      <h2 class="heading">Everything you need!</h2>
+      <div class="features mainWidth">
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 16; --y: 13; --size: 4rem; --adjust: 1"></div>
           </div>
+          <p>Search for all items in the game!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Community Center & Joja Guide</h2>
-            <p>Bundle checklist and Joja route planning at your fingertips.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 11; --y: 59; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Perfection Tracker for 100% completion!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Golden Walnut Checklist</h2>
-            <p>Hunt down every last Golden Walnut on Ginger Island with ease.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 0; --y: 60; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Track all items you acquire!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Building & Upgrade Info</h2>
-            <p>Plan your farm layout with complete data on all buildings and upgrades.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 0; --y: 4; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Villager gifts, schedules, and heart events!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Forge & Enchantments Guide</h2>
-            <p>Master the Volcano Forge with a breakdown of all weapon and tool enchantments.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 20; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Community Center &amp; Joja Bundles (+ remixed!)</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Achievements List</h2>
-            <p>Browse and track every in-game achievement as you complete them.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 11; --y: 49; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Find all Golden Walnuts!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Skills Tracker</h2>
-            <p>Track your skill progress and view unlocks for every level.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Track all Achievements!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Custom Notes, To-Do List &amp; Calendar</h2>
-            <p>Plan your seasons with personal notes, a fully editable calendar, and daily to-do lists.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 12; --y: 13; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Quick Notes so you don't forget!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Multiple Farm Support</h2>
-            <p>Manage and track progress across all your farms.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 17; --y: 6; --size: 4.8rem; --adjust: 0.66"></div>
           </div>
+          <p>To Do list for your daily tasks!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Global Search</h2>
-            <p>Quickly find any item, villager, or topic in seconds.</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 16; --y: 15; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Calendar for planning!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Offline & Private</h2>
-            <p>
-              Works entirely offline—no internet required and no data is ever collected, stored, or sent anywhere. Your
-              privacy is fully protected.
-            </p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 18; --y: 57; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Grandpa's Evaluation Tracker!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>100% Free and NO Ads!</h2>
-            <p>
-              Enjoy all features without any ads or interruptions. The only purchases within the app are optional tips
-              for the Developer.
-            </p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 12; --y: 15; --size: 4.8rem; --adjust: 0.55"></div>
           </div>
+          <p>Multiple Farm Support!</p>
         </div>
-        <div class="feature">
-          <div class="featureContent">
-            <h2>Get Started</h2>
-            <p>Your journey to Perfection just got easier. Download now and make every day in Stardew Valley count!</p>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 3; --y: 57; --size: 3.8rem; --adjust: 1"></div>
           </div>
+          <p>Fully Offline! Nothing is tracked, full privacy!</p>
         </div>
-        <div class="feature helpBoxWrapper">
-          <div class="helpBox">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <!-- 
-              Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.
-              -->
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
-              />
-            </svg>
+        <div class="box sticks">
+          <div class="featureIcon">
+            <div class="appIcon" aria-hidden="true" style="--x: 6; --y: 41; --size: 3.8rem; --adjust: 1"></div>
+          </div>
+          <p>100% Free and NO Ads!</p>
+        </div>
+      </div>
+      <h2 class="heading">Reviews & Testimonials</h2>
+      <div class="testimonials mainWidth">
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>
+            "I used to always run to the Stardew Wiki, but this app is so much more user-friendly and easily accessible.
+            I might even possibly say that this is better than the wiki!"
+          </p>
+          <p><small>- Justin G.</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>
+            "Well laid out. Has everything with explanations in an easy to use app. Best app I have used for tracking my
+            progress in SDV."
+          </p>
+          <p><small>- Rachel H.</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>
+            "This is easily the BEST companion app I have ever used!! So far I have seen no ads and the UI is flawless,
+            allowing you to track progress for multiple saved farms. never have I seen so much reference material in one
+            OFFLINE usable format. Truly outstanding work."
+          </p>
+          <p><small>- Ifalna W.</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>
+            "Thought it was just a library checklist. its actually an extensive companion app that covers a range of
+            things in stardew valley. no companion app is truly "complete". this comes close. it's decent and I like the
+            interface too. spot on"
+          </p>
+          <p><small>- Darren D.</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>"I wish there was an app like this for every game"</p>
+          <p><small>- Jessie B.</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>"Me ha parecido la guía más completa de stardew Valley de la play store, es gratis y sin internet"</p>
+          <p><small>- Laura</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>
+            "Changed my life, highly recommend for anyone who likes keeping track/having info easily accessible for
+            Stardew"
+          </p>
+          <p><small>- Sera-Anne</small></p>
+        </div>
+        <div class="box scroll">
+          <div class="rating">
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+            <div class="appIcon" aria-hidden="true" style="--x: 19; --y: 10; --size: 1.6rem"></div>
+          </div>
+          <p>
+            "aplicativo muito bom para quem esta começando ou que joga stardew valley a um bom tempo, dá pra marcas tudo
+            o que você já fez ver onde os NPCs estão, tem muuuuuuita coisa, amei <3"
+          </p>
+          <p><small>- Sabryna F.</small></p>
+        </div>
+      </div>
+      <h2 class="heading">Enhance your Stardew Valley experience</h2>
+      <div class="box redMetal mainWidth" aria-label="Get the app">
+        <div class="getItBar">
+          <a href="https://apps.apple.com/app/id6754466392">
+            <img src="/assets/app-store.svg" alt="App Store icon with the text: 'Download on the App Store'" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.guntherslibrary.app">
+            <img src="/assets/google-play.png" alt="Google Play store icon with the text: 'Get it on Google Play'" />
+          </a>
+          <a href="https://guntherslibrary.netlify.app/" class="getItBarBtn">
+            <div class="appIcon" aria-hidden="true" style="--x: 6; --y: 8; --size: 3.2rem"></div>
+            <div class="getItBarBtnContent">
+              <div>Get it on the Web</div>
+              <small>guntherslibrary.netlify.app</small>
+            </div>
+          </a>
+        </div>
+      </div>
+      <h2 class="heading">Have a question?</h2>
+      <div class="helpBox mainWidth">
+        <a href="/contact" class="btn"> Contact the Developer </a>
+        <a href="https://discord.gg/Z8hYEc6A4Q" target="_blank" rel="noopener noreferrer" class="btn">
+          Chat on our Discord
+        </a>
+      </div>
+      <footer class="mainWidth">
+        <div class="footerContent">
+          <div class="footerContentBox note">
+            <div class="designedBy">
+              Designed &amp; Developed by
+              <a href="/" class="a"><img class="bluecaretLogo" src="img/ui/bluecaret.svg" alt="BlueCaret logo" /></a>
+            </div>
             <div>
-              <h2>Have a question?</h2>
-              <p>Contact us with any questions.</p>
-              <p class="questionLinks">
-                <a href="/contact" class="btn"> Contact page </a>
-                <a href="/guntherslibrary/privacy" class="btn"> Privacy policy </a>
-              </p>
+              <a href="https://www.buymeacoffee.com/bluecaret" class="bmc"
+                ><img src="/assets/bmc-full-logo-no-background.png" alt="Support the developer by buying me a coffee"
+              /></a>
+            </div>
+            <div class="copyright">
+              &copy; <span id="currentYear"></span> BlueCaret.
+              <a href="/guntherslibrary/privacy/" class="a">Privacy Policy</a>.
+            </div>
+            <div class="concernedape">
+              Stardew Valley assets are property of
+              <a href="https://www.stardewvalley.net/" target="_blank" rel="noopener noreferrer" class="a"
+                >ConcernedApe</a
+              >.
             </div>
           </div>
         </div>
-      </div>
-
-      <app-footer>
-        <div slot="pre">
-          <div class="getItBar">
-            <a href="https://apps.apple.com/app/id6754466392"
-              ><img src="/assets/app-store.svg" alt="App Store icon with the text: 'Download on the App Store'"
-            /></a>
-            <a href="https://play.google.com/store/apps/details?id=com.guntherslibrary.app"
-              ><img src="/assets/google-play.png" alt="Google Play store icon with the text: 'Get it on Google Play'"
-            /></a>
-            <a href="https://guntherslibrary.netlify.app/" class="btn">
-              <div>Get it on the Web</div>
-              <small>guntherslibrary.netlify.app</small></a
-            >
-          </div>
-          <h2 class="footerLogo">
-            <a href="/guntherslibrary">
-              <img src="/assets/guntherslibrary-logo-full.png" alt="Gunther's Library logo" />
-            </a>
-          </h2>
+        <div class="museumGraphic">
+          <span class="gunther" id="gunther" data-icon="1"></span>
+          <span class="museum"></span>
         </div>
-      </app-footer>
-    </div>
+      </footer>
+    </main>
+    <script>
+      const animationBase = [
+        { icon: 1, time: 500 },
+        { icon: 5, time: 1000 },
+        { icon: 1, time: 500 },
+        { icon: 7, time: 1000 },
+        { icon: 1, time: 500 },
+        { icon: 5, time: 1000 },
+        { icon: 1, time: 500 },
+        { icon: 7, time: 1000 },
+        { icon: 1, time: 500 },
+        { icon: 2, time: 300 },
+        { icon: 3, time: 500 },
+        { icon: 4, time: 500 },
+        { icon: 3, time: 500 },
+        { icon: 4, time: 500 },
+        { icon: 3, time: 500 },
+        { icon: 4, time: 500 },
+        { icon: 2, time: 300 },
+        { icon: 1, time: 2000 },
+        { icon: 5, time: 2000 },
+        { icon: 1, time: 2000 },
+        { icon: 2, time: 300 },
+        { icon: 3, time: 500 },
+        { icon: 4, time: 500 },
+        { icon: 3, time: 500 },
+        { icon: 4, time: 500 },
+        { icon: 3, time: 500 },
+        { icon: 4, time: 500 },
+        { icon: 2, time: 300 },
+        { icon: 1, time: 2000 },
+      ]
+      let animation = animationBase
+      let animationInterval = null
 
+      function startAnimation() {
+        const guntherEl = document.getElementById('gunther')
+        let index = 0
+
+        const animate = () => {
+          guntherEl.dataset.icon = animation[index].icon
+          clearTimeout(animationInterval)
+          animationInterval = setTimeout(() => {
+            index = (index + 1) % animation.length
+            animate()
+          }, animation[index].time)
+        }
+
+        animate()
+      }
+      startAnimation()
+
+      function updateCurrentYear() {
+        const currentYearEl = document.getElementById('currentYear')
+        if (currentYearEl) {
+          currentYearEl.textContent = new Date().getFullYear()
+        }
+      }
+      updateCurrentYear()
+
+      // Image dialog functionality
+      const dialog = document.getElementById('imageDialog')
+      const dialogImage = document.getElementById('dialogImage')
+
+      document.querySelectorAll('.gallery img').forEach((img) => {
+        img.addEventListener('click', () => {
+          dialogImage.src = img.dataset.full
+          dialogImage.alt = img.alt
+          dialog.showModal()
+        })
+      })
+
+      dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close()
+      })
+
+      dialog.querySelector('.close').addEventListener('click', () => {
+        dialog.close()
+      })
+    </script>
     <script type="module" src="/js/header.js"></script>
     <script type="module" src="/js/footer.js"></script>
-    <script type="module" src="/js/gallery.js"></script>
+    <!-- <script type="module" src="/js/gallery.js"></script> -->
   </body>
 </html>
