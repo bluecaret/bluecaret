@@ -211,11 +211,24 @@ footer {
   img {
     width: 100%;
     height: auto;
-    border-radius: 1.2rem;
-    cursor: pointer;
   }
   .box.twigs {
     padding: 1rem 1.4rem;
+  }
+  .screenshotBtn {
+    display: grid;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    &:focus-visible {
+      outline-offset: 1.4rem;
+    }
   }
 }
 
@@ -223,6 +236,12 @@ dialog.iconPopover {
   /* position: fixed; */
   /* inset: 0; */
   padding: 0;
+  .close {
+    cursor: pointer;
+    .appIcon {
+      --x: 12; --y: 4; --size: 2.4rem
+    }
+  }
 }
 
 dialog.iconPopover::backdrop {

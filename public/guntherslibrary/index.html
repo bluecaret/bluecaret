@@ -50,52 +50,112 @@
             </div>
           </a>
         </div>
+        <p style="font-size: 1.2rem; text-align: center; text-wrap: balance; margin-block-start: 0.6rem">
+          Requires Android 12+ or iOS 14+ for the app. Web version works on most modern browsers.
+        </p>
       </div>
       <div class="galleryWrapper">
         <div class="gallery">
           <div class="box twigs">
-            <img
-              src="/guntherslibrary/img/01.png"
-              data-full="/guntherslibrary/img/01.png"
-              alt="Marketing image for Gunther's Library that says 'Track your game progress across multiple farms!'"
-            />
+            <button class="screenshotBtn" popovertarget="screen1">
+              <img
+                src="/guntherslibrary/img/01.png"
+                alt="Marketing image for Gunther's Library that says 'Track your game progress across multiple farms!'"
+              />
+            </button>
           </div>
           <div class="box twigs">
-            <img
-              src="/guntherslibrary/img/02.png"
-              data-full="/guntherslibrary/img/02.png"
-              alt="Marketing image for Gunther's Library that says 'Reach perfection with ease using the tracker!'"
-            />
+            <button class="screenshotBtn" popovertarget="screen2">
+              <img
+                src="/guntherslibrary/img/02.png"
+                alt="Marketing image for Gunther's Library that says 'Reach perfection with ease using the tracker!'"
+              />
+            </button>
           </div>
           <div class="box twigs">
-            <img
-              src="/guntherslibrary/img/03.png"
-              data-full="/guntherslibrary/img/03.png"
-              alt="Marketing image for Gunther's Library that says 'Keep tabs on your favorite villagers!'"
-            />
+            <button class="screenshotBtn" popovertarget="screen3">
+              <img
+                src="/guntherslibrary/img/03.png"
+                alt="Marketing image for Gunther's Library that says 'Keep tabs on your favorite villagers!'"
+              />
+            </button>
           </div>
           <div class="box twigs">
-            <img
-              src="/guntherslibrary/img/04.png"
-              data-full="/guntherslibrary/img/04.png"
-              alt="Marketing image for Gunther's Library that says 'Quickly discover the secrets to each item!'"
-            />
+            <button class="screenshotBtn" popovertarget="screen4">
+              <img
+                src="/guntherslibrary/img/04.png"
+                alt="Marketing image for Gunther's Library that says 'Quickly discover the secrets to each item!'"
+              />
+            </button>
           </div>
           <div class="box twigs">
-            <img
-              src="/guntherslibrary/img/05.png"
-              data-full="/guntherslibrary/img/05.png"
-              alt="Marketing image for Gunther's Library that says 'Never forget birthdays, festivals or special events!'"
-            />
+            <button class="screenshotBtn" popovertarget="screen5">
+              <img
+                src="/guntherslibrary/img/05.png"
+                alt="Marketing image for Gunther's Library that says 'Never forget birthdays, festivals or special events!'"
+              />
+            </button>
           </div>
         </div>
 
-        <dialog id="imageDialog" class="iconPopover">
+        <dialog id="screen1" class="iconPopover" popover>
           <div class="iconPopoverInner">
-            <button popovertarget="imageDialog" popovertargetaction="hide" class="close">
-              <div class="appIcon" aria-hidden="true" style="--x: 12; --y: 4; --size: 2.4rem"></div>
+            <button popovertarget="screen1" popovertargetaction="hide" class="close" aria-label="Close dialog">
+              <div class="appIcon" aria-hidden="true"></div>
             </button>
-            <img id="dialogImage" alt="" />
+            <img
+              id="dialogImage"
+              src="/guntherslibrary/img/01.png"
+              alt="Marketing image for Gunther's Library that says 'Track your game progress across multiple farms!'"
+            />
+          </div>
+        </dialog>
+        <dialog id="screen2" class="iconPopover" popover>
+          <div class="iconPopoverInner">
+            <button popovertarget="screen2" popovertargetaction="hide" class="close" aria-label="Close dialog">
+              <div class="appIcon" aria-hidden="true"></div>
+            </button>
+            <img
+              id="dialogImage"
+              src="/guntherslibrary/img/02.png"
+              alt="Marketing image for Gunther's Library that says 'Reach perfection with ease using the tracker!'"
+            />
+          </div>
+        </dialog>
+        <dialog id="screen3" class="iconPopover" popover>
+          <div class="iconPopoverInner">
+            <button popovertarget="screen3" popovertargetaction="hide" class="close" aria-label="Close dialog">
+              <div class="appIcon" aria-hidden="true"></div>
+            </button>
+            <img
+              id="dialogImage"
+              src="/guntherslibrary/img/03.png"
+              alt="Marketing image for Gunther's Library that says 'Keep tabs on your favorite villagers!'"
+            />
+          </div>
+        </dialog>
+        <dialog id="screen4" class="iconPopover" popover>
+          <div class="iconPopoverInner">
+            <button popovertarget="screen4" popovertargetaction="hide" class="close" aria-label="Close dialog">
+              <div class="appIcon" aria-hidden="true"></div>
+            </button>
+            <img
+              id="dialogImage"
+              src="/guntherslibrary/img/04.png"
+              alt="Marketing image for Gunther's Library that says 'Quickly discover the secrets to each item!'"
+            />
+          </div>
+        </dialog>
+        <dialog id="screen5" class="iconPopover" popover>
+          <div class="iconPopoverInner">
+            <button popovertarget="screen5" popovertargetaction="hide" class="close" aria-label="Close dialog">
+              <div class="appIcon" aria-hidden="true"></div>
+            </button>
+            <img
+              id="dialogImage"
+              src="/guntherslibrary/img/05.png"
+              alt="Marketing image for Gunther's Library that says 'Never forget birthdays, festivals or special events!'"
+            />
           </div>
         </dialog>
       </div>
@@ -314,6 +374,9 @@
             </div>
           </a>
         </div>
+        <p style="font-size: 1.2rem; text-align: center; text-wrap: balance; margin-block-start: 0.6rem">
+          Requires Android 12+ or iOS 14+ for the app. Web version works on most modern browsers.
+        </p>
       </div>
       <h2 class="heading">Have a question?</h2>
       <div class="helpBox mainWidth">
@@ -413,24 +476,24 @@
       updateCurrentYear()
 
       // Image dialog functionality
-      const dialog = document.getElementById('imageDialog')
-      const dialogImage = document.getElementById('dialogImage')
+      // const dialog = document.getElementById('imageDialog')
+      // const dialogImage = document.getElementById('dialogImage')
 
-      document.querySelectorAll('.gallery img').forEach((img) => {
-        img.addEventListener('click', () => {
-          dialogImage.src = img.dataset.full
-          dialogImage.alt = img.alt
-          dialog.showModal()
-        })
-      })
+      // document.querySelectorAll('.gallery img').forEach((img) => {
+      //   img.addEventListener('click', () => {
+      //     dialogImage.src = img.dataset.full
+      //     dialogImage.alt = img.alt
+      //     dialog.showModal()
+      //   })
+      // })
 
-      dialog.addEventListener('click', (e) => {
-        if (e.target === dialog) dialog.close()
-      })
+      // dialog.addEventListener('click', (e) => {
+      //   if (e.target === dialog) dialog.close()
+      // })
 
-      dialog.querySelector('.close').addEventListener('click', () => {
-        dialog.close()
-      })
+      // dialog.querySelector('.close').addEventListener('click', () => {
+      //   dialog.close()
+      // })
     </script>
     <script type="module" src="/js/header.js"></script>
     <script type="module" src="/js/footer.js"></script>
